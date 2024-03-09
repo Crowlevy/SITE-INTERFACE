@@ -53,7 +53,7 @@ nav.side-menu.expande{
 
 .btn-activate{
     width: 100%;
-    padding-left: 10px;
+    padding-left: 20px;
     padding-bottom: 10px;
 }
 
@@ -67,6 +67,8 @@ ul{
     height: 100%;
     list-style-type: none;
 }
+
+
 
 ul li.item-menu{
     transition: .2s;
@@ -105,7 +107,7 @@ nav.side-menu.expande .txt-link{
 
 ul li.item-menu a .icon > i{
     font-size: 30px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 @media screen and (max-width: 600px) {
     nav.side-menu {
@@ -124,12 +126,19 @@ ul li.item-menu a .icon > i{
     }
     ul {
         display: flex;
-        flex-direction: row;
         justify-content: space-around;
     }
 
     ul li.item-menu {
-        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 10px;
+    }
+
+    ul li.item-menu a .icon > i{
+        margin-left: 0px;
     }
 
     ul li.item-menu a {
