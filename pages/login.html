@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/styles/style-login.css">
+    <title>TELA DE LOGIN EITA</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container criar">
+            <form id="loginForm" method="post" action="/pages/home.html"><!--dps implementar o php aqui e validar o login-->
+                <h1>CRIE SUA CONTA</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>USE SEU EMAIL PARA FAZER O REGISTRO</span>
+                <input type="text" placeholder="NOME" name="nome">
+                <input type="email" placeholder="EMAIL" name="email">
+                <input type="password" placeholder="SENHA" name="senha">
+                <button type="submit">REGISTRAR-SE</button>
+            </form>
+        </div>
+        <div class="form-container logar">
+            <form id="loginForm" method="post" action="/pages/home.html"><!--dps implementar o php aqui e validar o login-->
+                <h1>ENTRAR</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>USE SUA SENHA E EMAIL</span>
+                <input type="email" placeholder="EMAIL" name="email" id="validation-email">
+                <input type="password" placeholder="SENHA" name="senha" id="validation-senha">
+                <a href="#">ESQUECEU A SENHA</a>
+                <button id="button-validation" type="submit">ENTRAR</button>
+            </form>
+        </div>
+        <div class="container-aparecer">
+            <div class="aparecer">
+                <div class="aparecer-painel aparecer-esquerda">
+                    <h1>OLÁ DE VOLTA UAUUU</h1>
+                    <p>CASO NÃO TENHA UMA CONTA CLIQUE AQUI</p>
+                    <button class="hidden" id="login">REGISTRAR-SE</button>
+                </div>
+                <div class="aparecer-painel aparecer-direita">
+                    <h1>BEM-VINDO AAAAA</h1>
+                    <p>ESSE É O MELHOR SITE DA ÁFRICA DO SUL<br>
+                        CASO JÁ TENHA UMA CONTA CLIQUE AQUI UHUUU
+                    </p>
+                    <button class="hidden" id="register">ENTRAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/scripts/script-login.js">
+         document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+            // Redireciona para a página desejada após o envio do formulário
+            window.location.href = "/pages/home.html";
+        });
+    </script>
+</body>
+
+</html>
